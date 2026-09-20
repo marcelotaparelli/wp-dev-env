@@ -1,0 +1,86 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}},"layout":{"type":"constrained","contentSize":"1400px"}} -->
+<main class="wp-block-group" style="padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+
+  <!-- wp:columns -->
+  <div class="wp-block-columns">
+
+    <!-- wp:column {"width":"70%"} -->
+    <div class="wp-block-column" style="flex-basis:70%">
+
+      <!-- wp:heading {"textColor":"primary"} -->
+      <h2 class="wp-block-heading has-primary-color has-text-color">Posts recentes</h2>
+      <!-- /wp:heading -->
+
+      <!-- wp:query {"queryId":1,"query":{"perPage":6,"postType":"post","inherit":true},"layout":{"type":"grid","columnCount":2}} -->
+      <div class="wp-block-query">
+        <!-- wp:post-template -->
+          <!-- wp:post-featured-image {"style":{"border":{"radius":"8px"}}} /-->
+          <!-- wp:post-terms {"term":"category","textColor":"muted"} /-->
+          <!-- wp:post-date {"textColor":"muted"} /-->
+          <!-- wp:post-title {"isLink":true,"textColor":"primary"} /-->
+          <!-- wp:post-excerpt {"excerptLength":25} /-->
+          <!-- wp:read-more {"content":"Ler o conteúdo →","textColor":"accent"} /-->
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-pagination -->
+          <!-- wp:query-pagination-previous /-->
+          <!-- wp:query-pagination-numbers /-->
+          <!-- wp:query-pagination-next /-->
+        <!-- /wp:query-pagination -->
+      </div>
+      <!-- /wp:query -->
+
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column {"width":"30%"} -->
+    <div class="wp-block-column" style="flex-basis:30%">
+
+      <!-- wp:heading {"level":3,"textColor":"primary"} -->
+      <h3 class="wp-block-heading has-primary-color has-text-color">Escolha o assunto</h3>
+      <!-- /wp:heading -->
+
+      <!-- wp:categories {"displayAsDropdown":false,"showPostCounts":false,"showHierarchy":false} /-->
+
+      <!-- wp:heading {"level":3,"textColor":"primary"} -->
+      <h3 class="wp-block-heading has-primary-color has-text-color">Mais lidos</h3>
+      <!-- /wp:heading -->
+
+      <!-- wp:query {"queryId":2,"query":{"perPage":4,"postType":"post","orderBy":"date"}} -->
+      <div class="wp-block-query">
+        <!-- wp:post-template -->
+          <!-- wp:columns -->
+          <div class="wp-block-columns">
+            <!-- wp:column {"width":"80px"} -->
+            <div class="wp-block-column" style="flex-basis:80px">
+              <!-- wp:post-featured-image {"width":"80px","height":"80px","style":{"border":{"radius":"6px"}}} /-->
+            </div>
+            <!-- /wp:column -->
+            <!-- wp:column -->
+            <div class="wp-block-column">
+              <!-- wp:post-date {"textColor":"muted"} /-->
+              <!-- wp:post-title {"isLink":true,"level":4,"textColor":"primary"} /-->
+            </div>
+            <!-- /wp:column -->
+          </div>
+          <!-- /wp:columns -->
+        <!-- /wp:post-template -->
+      </div>
+      <!-- /wp:query -->
+
+      <!-- wp:image {"style":{"border":{"radius":"8px"}}} -->
+      <figure class="wp-block-image"><img src="" alt="Imagem promocional deste projeto"/></figure>
+      <!-- /wp:image -->
+
+    </div>
+    <!-- /wp:column -->
+
+  </div>
+  <!-- /wp:columns -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

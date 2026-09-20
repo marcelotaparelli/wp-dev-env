@@ -1,0 +1,22 @@
+/*
+Theme Name: Boilerplate
+Theme URI: https://example.com
+Author: Seu Nome
+Author URI: https://example.com
+Description: Tema base neutro para novos projetos WordPress.
+Version: 0.1.0
+Requires at least: 6.5
+Tested up to: 7.0
+Requires PHP: 8.1
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: boilerplate
+*/
+
+/*
+Este arquivo só precisa existir com esse cabeçalho — é assim que o
+WordPress identifica o tema em Aparência > Temas. Estilos de verdade
+ficam no theme.json (design tokens) e nos arquivos dentro de
+assets/css/ (regras específicas que o theme.json não cobre).
+Não jogue CSS solto aqui.
+*/

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1440px"
+    },
+    "color": {
+      "palette": [
+        { "slug": "background", "color": "#FFFFFF", "name": "Fundo" },
+        { "slug": "dark", "color": "#1A1A1A", "name": "Escuro (header/rodapé)" },
+        { "slug": "primary", "color": "#1F2937", "name": "Primário (títulos)" },
+        { "slug": "secondary", "color": "#4B5563", "name": "Secundário" },
+        { "slug": "accent", "color": "#2563EB", "name": "Destaque (botões/links)" },
+        { "slug": "text", "color": "#000000", "name": "Texto" },
+        { "slug": "muted", "color": "#6B7280", "name": "Texto Secundário" },
+        { "slug": "muted-alt", "color": "#9CA3AF", "name": "Texto Secundário (alternativo)" },
+        { "slug": "light-gray", "color": "#E5E7EB", "name": "Cinza Claro" }
+      ],
+      "custom": true,
+      "customDuotone": false,
+      "customGradient": false
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "inter",
+          "name": "Inter",
+          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "size": "0.875rem", "name": "Pequeno" },
+        { "slug": "medium", "size": "1rem", "name": "Médio" },
+        { "slug": "large", "size": "1.5rem", "name": "Grande" },
+        { "slug": "x-large", "size": "2.75rem", "name": "Extra grande (títulos)" }
+      ],
+      "customFontSize": false
+    },
+    "spacing": {
+      "units": ["px", "rem", "%"],
+      "spacingScale": {
+        "steps": 0
+      },
+      "spacingSizes": [
+        { "slug": "small", "size": "1rem", "name": "Pequeno" },
+        { "slug": "medium", "size": "2rem", "name": "Médio" },
+        { "slug": "large", "size": "4rem", "name": "Grande" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--background)",
+      "text": "var(--wp--preset--color--text)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inter)",
+      "fontSize": "var(--wp--preset--font-size--medium)",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--accent)"
+        }
+      },
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--primary)"
+        },
+        "typography": {
+          "fontWeight": "700"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "title": "Cabeçalho", "area": "header" },
+    { "name": "footer", "title": "Rodapé", "area": "footer" }
+  ]
+}

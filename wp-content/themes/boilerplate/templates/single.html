@@ -1,0 +1,51 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<main class="wp-block-group" style="padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+
+  <!-- wp:post-featured-image {"style":{"border":{"radius":"8px"}}} /-->
+
+  <!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+  <div class="wp-block-group">
+    <!-- wp:group {"layout":{"type":"flex"}} -->
+    <div class="wp-block-group">
+      <!-- wp:paragraph {"textColor":"muted"} -->
+      <p>Por: <!-- wp:post-author-name /--></p>
+      <!-- /wp:paragraph -->
+      <!-- wp:post-date {"textColor":"muted"} /-->
+      <!-- wp:post-terms {"term":"category","textColor":"muted"} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:post-comments-count /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:post-title {"level":1,"textColor":"primary"} /-->
+
+  <!-- wp:post-content /-->
+
+  <!-- wp:paragraph -->
+  <p><a href="javascript:history.back()">← Voltar</a></p>
+  <!-- /wp:paragraph -->
+
+  <!-- wp:heading {"level":3,"textColor":"primary"} -->
+  <h3 class="wp-block-heading has-primary-color has-text-color">Leia também</h3>
+  <!-- /wp:heading -->
+
+  <!-- wp:query {"queryId":3,"query":{"perPage":3,"postType":"post","inherit":false,"exclude":[]},"layout":{"type":"grid","columnCount":3}} -->
+  <div class="wp-block-query">
+    <!-- wp:post-template -->
+      <!-- wp:post-featured-image {"width":"100px","height":"70px","style":{"border":{"radius":"6px"}}} /-->
+      <!-- wp:post-date {"textColor":"muted"} /-->
+      <!-- wp:post-title {"isLink":true,"level":5,"textColor":"primary"} /-->
+    <!-- /wp:post-template -->
+  </div>
+  <!-- /wp:query -->
+
+  <!-- wp:categories {"displayAsDropdown":false,"showPostCounts":false,"showHierarchy":false} /-->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

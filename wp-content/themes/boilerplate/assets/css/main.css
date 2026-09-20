@@ -1,0 +1,9 @@
+/*
+ * Regras que não pertencem ao theme.json: layout específico de
+ * componentes/blocos customizados, ajustes finos que os design
+ * tokens não cobrem.
+ *
+ * Se você perceber que está repetindo cor/espaçamento/fonte aqui que
+ * já existe no theme.json, prefira usar a variável CSS gerada por ele
+ * (ex: var(--wp--preset--color--accent)) em vez de um valor fixo novo.
+ */
