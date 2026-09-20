@@ -1,0 +1,10 @@
+.env
+
+# Uploads de mídia geralmente não vão pro git (ficam pesados)
+wp-content/uploads/
+
+# Só o tema custom é código seu; o resto do wp-content (plugins,
+# temas padrão do core) não precisa ser versionado.
+wp-content/plugins/
+wp-content/themes/*
+!wp-content/themes/boilerplate
