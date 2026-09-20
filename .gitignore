@@ -3,8 +3,8 @@
 # Uploads de mídia geralmente não vão pro git (ficam pesados)
 wp-content/uploads/
 
-# Só o tema custom é código seu; o resto do wp-content (plugins,
-# temas padrão do core) não precisa ser versionado.
+# Plugins e temas padrão instalados pelo WordPress não são versionados.
+# Qualquer tema próprio, inclusive após renomear boilerplate, entra no Git.
 wp-content/plugins/
-wp-content/themes/*
-!wp-content/themes/boilerplate
+wp-content/themes/index.php
+wp-content/themes/twentytwenty*/

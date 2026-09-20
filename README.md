@@ -5,6 +5,8 @@ WordPress com um ambiente de desenvolvimento Docker. Para começar um
 projeto novo, duplique este repositório e renomeie a pasta do tema
 (`wp-content/themes/boilerplate` → `wp-content/themes/meu-novo-site`)
 substituindo o slug `boilerplate` em todo o código do tema.
+O `.gitignore` já acompanha temas próprios com qualquer nome e ignora os
+exemplos padrão do WordPress.
 
 ## 1. Como usar
 
@@ -15,6 +17,11 @@ docker compose up -d
 
 - Site: http://localhost:8080
 - WP-CLI (exemplo): `docker compose run --rm wpcli plugin list`
+
+Ao iniciar, o container garante que o Apache (`www-data`) possa ler os temas
+montados. Isso evita que um tema copiado com arquivos `0600` desapareça de
+**Aparência > Temas**. O ajuste acrescenta leitura e acesso a diretórios;
+não altera a permissão de escrita.
 
 Se precisar inspecionar o banco diretamente em algum momento (debug de
 `theme.json`/Site Editor, checar `wp_options`, etc.), dá pra acessar
@@ -56,6 +63,10 @@ A estratégia cobre os dois cenários com o mesmo processo:
    wp search-replace 'http://localhost:8080' 'https://seudominio.com' --all-tables
    ```
 5. Ativar o tema e conferir plugins.
+
+Em uma hospedagem fora deste Compose, confira as permissões ao copiar o tema:
+diretórios precisam permitir acesso ao usuário do servidor web e arquivos como
+`style.css` precisam permitir leitura.
 
 **Cenário B — servidor não tem WordPress ainda**
 1. Suba o WordPress lá (via instalador da hospedagem, Softaculous, ou

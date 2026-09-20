@@ -15,6 +15,9 @@ services:
     image: wordpress:7.0-php8.3-apache
     container_name: wp_site
     restart: unless-stopped
+    # Volumes compartilhados podem chegar com arquivos 0600. O Apache precisa
+    # ler o style.css de cada tema para listá-lo em Aparência > Temas.
+    command: ["sh", "-c", "chmod -R a+rX /var/www/html/wp-content/themes && exec apache2-foreground"]
     depends_on:
       - db
     ports:
